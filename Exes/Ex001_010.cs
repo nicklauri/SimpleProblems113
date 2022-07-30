@@ -3,7 +3,7 @@
  *       I can make another function to do that, but it will be hard to understand.
  */
 
-namespace BaiTap;
+namespace Exercises;
 
 public partial class Program
 {

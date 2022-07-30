@@ -1,5 +1,5 @@
 ﻿
-namespace BaiTap;
+namespace Exercises;
 
 public partial class Program
 {
