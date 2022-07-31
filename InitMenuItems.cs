@@ -28,6 +28,16 @@ public partial class Program
             new("S(x, n) = 1 + x^2/2! + x^4/4! + ... + x^2n/(2n)!", Ex018),
             new("S(n) = 1 + x + x^3/3! + x^5/5! + ... + x^(2n+1)/(2n+1)!", Ex019),
             new("List of factors of a number n (with n >= 0)", Ex020),
+            new("Sum of factors of a number n (with n >= 0)", Ex021),
+            new("Product of factors of a number n (with n >= 0)", Ex022),
+            new("Count factors of a number n (with n >= 0)", Ex023),
+            new("List of odd factors of a number n (with n >= 0)", Ex024),
+            new("Sum of even factors of a number n (with n >= 0)", Ex025),
+            new("Product of odd factors of a number n (with n >= 0)", Ex026),
+            new("Count even factors of a number n (with n >= 0)", Ex027),
+            new("Sum of factors that less than n of a number n (with n >= 0)", Ex028),
+            new("Find the biggest odd factor of a number n (with n >= 0)", Ex029),
+            new("Check if n (n >= 0) is a perfect number", Ex030),
         };
     }
 }
