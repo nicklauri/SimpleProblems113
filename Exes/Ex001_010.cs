@@ -10,7 +10,7 @@ public partial class Program
     /// Starts with i=0
     public void Ex001()
     {
-        var n = ReadIntFromStdin("Input n: ");
+        var n = ReadIntFromStdin("Input n: ", 1);
         if (n is null)
         {
             return;
@@ -30,7 +30,7 @@ public partial class Program
     /// Starts with i=0
     public void Ex002()
     {
-        var n = ReadIntFromStdin("Input n: ");
+        var n = ReadIntFromStdin("Input n: ", 1);
         if (n is null)
         {
             return;
@@ -50,7 +50,7 @@ public partial class Program
     /// Starts with i=1
     public void Ex003()
     {
-        var n = ReadIntFromStdin("Input n: ");
+        var n = ReadIntFromStdin("Input n: ", 1);
         if (n is null)
         {
             return;
@@ -70,7 +70,7 @@ public partial class Program
     /// Starts with i=1
     public void Ex004()
     {
-        var n = ReadIntFromStdin("Input n: ");
+        var n = ReadIntFromStdin("Input n: ", 1);
         if (n is null)
         {
             return;
@@ -90,7 +90,7 @@ public partial class Program
     /// Starts with i=0
     public void Ex005()
     {
-        var n = ReadIntFromStdin("Input n: ");
+        var n = ReadIntFromStdin("Input n: ", 0);
         if (n is null)
         {
             return;
@@ -110,7 +110,7 @@ public partial class Program
     /// Starts with i=1
     public void Ex006()
     {
-        var n = ReadIntFromStdin("Input n: ");
+        var n = ReadIntFromStdin("Input n: ", 1);
         if (n is null)
         {
             return;
@@ -130,7 +130,7 @@ public partial class Program
     /// Starts with i=1
     public void Ex007()
     {
-        var n = ReadIntFromStdin("Input n: ");
+        var n = ReadIntFromStdin("Input n: ", 1);
         if (n is null)
         {
             return;
@@ -150,7 +150,7 @@ public partial class Program
     /// Starts with i=0
     public void Ex008()
     {
-        var n = ReadIntFromStdin("Input n: ");
+        var n = ReadIntFromStdin("Input n: ", 0);
         if (n is null)
         {
             return;
@@ -195,7 +195,7 @@ public partial class Program
             return;
         }
 
-        var n = ReadIntFromStdin("Input n: ", 0);
+        var n = ReadIntFromStdin("Input n: ");
         if (n is null)
         {
             return;
@@ -213,6 +213,10 @@ public partial class Program
             Console.WriteLine(0);
             return;
         }
+
+        var nIsNegative = n < 0;
+
+        n = Math.Abs(n.Value);
 
         var result = (long)x;
         for (var i = 1; i < n; ++i)
