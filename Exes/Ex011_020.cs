@@ -324,11 +324,12 @@ public partial class Program
             return;
         }
 
-        for (var i = 1; i <= n; ++i)
+        Console.Write("1");
+        for (var i = 2; i <= n; ++i)
         {
             if (n % i == 0)
             {
-                Console.Write($"{i} ");
+                Console.Write($", {i}");
             }
         }
     }
