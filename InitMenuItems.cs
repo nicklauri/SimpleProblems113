@@ -38,6 +38,7 @@ public partial class Program
             new("Sum of factors that less than n of a number n (with n >= 0)", Ex028),
             new("Find the biggest odd factor of a number n (with n >= 0)", Ex029),
             new("Check if n (n >= 0) is a perfect number", Ex030),
+            new("Check if n (n >= 0) is a prime number", Ex031),
         };
     }
 }
