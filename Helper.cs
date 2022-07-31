@@ -1,8 +1,11 @@
-
 namespace Exercises;
 
 public partial class Program
 {
+    ///<summary>
+    /// Read an integer from stdin and return. <br/>
+    /// Return null if user inputs invalid number or the number is less than mustGreaterOrEqual (mustGreaterOrEqual is not null).
+    ///</summary>
     public static int? ReadIntFromStdin(string prompt, int? mustGreaterOrEqual = null)
     {
         Console.Write(prompt);

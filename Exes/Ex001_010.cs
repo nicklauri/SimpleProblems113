@@ -87,7 +87,7 @@ public partial class Program
         Console.WriteLine(result);
     }
 
-    /// Start from i=0
+    /// Starts with i=0
     public void Ex005()
     {
         var n = ReadIntFromStdin("Input n: ");
@@ -107,7 +107,7 @@ public partial class Program
         Console.WriteLine(result);
     }
 
-    /// Start from i=1
+    /// Starts with i=1
     public void Ex006()
     {
         var n = ReadIntFromStdin("Input n: ");
@@ -127,7 +127,7 @@ public partial class Program
         Console.WriteLine(result);
     }
 
-    /// Start from i=1
+    /// Starts with i=1
     public void Ex007()
     {
         var n = ReadIntFromStdin("Input n: ");
@@ -167,7 +167,7 @@ public partial class Program
         Console.WriteLine(result);
     }
 
-    /// Starts with i=1
+    /// Starts with i=1, n>0
     public void Ex009()
     {
         var n = ReadIntFromStdin("Input n: ", 1);
@@ -189,7 +189,7 @@ public partial class Program
 
     public void Ex010()
     {
-        var x = ReadIntFromStdin("Input x: ", 0);
+        var x = ReadIntFromStdin("Input x: ");
         if (x is null)
         {
             return;
