@@ -23,7 +23,7 @@ public partial class Program
             {
                 if (n % i == 0)
                 {
-                    nIsPrime = true;
+                    nIsPrime = false;
                     break;
                 }
             }
