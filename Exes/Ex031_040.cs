@@ -40,10 +40,65 @@ public partial class Program
         }
     }
 
-    public void Ex032() { }
-    public void Ex033() { }
-    public void Ex034() { }
+    public void Ex032()
+    {
+        var n = ReadIntFromStdin("Input n: ", 1);
+        if (n is null)
+        {
+            return;
+        }
+
+        var m = (int)Math.Floor(Math.Sqrt((double)n));
+
+        if (m * m == n)
+        {
+            Console.WriteLine($"{n} is a square number");
+        }
+        else
+        {
+            Console.WriteLine($"{n} is NOT a square number");
+        }
+    }
+
+    public void Ex033()
+    {
+        var n = ReadIntFromStdin("Input n: ", 0);
+        if (n is null)
+        {
+            return;
+        }
+
+        var result = 0.0;
+
+        for (var i = 0; i < n; ++i)
+        {
+            result = Math.Sqrt(2 + result);
+        }
+
+        Console.WriteLine($"S({n}) = {result}");
+    }
+
+    public void Ex034()
+    {
+        var n = ReadIntFromStdin("Input n: ", 0);
+        if (n is null)
+        {
+            return;
+        }
+
+        var result = 1.0;
+
+        for (var i = 2; i <= n; ++i)
+        {
+            result = Math.Sqrt(i + result);
+        }
+
+        Console.WriteLine($"S({n}) = {result}");
+    }
+
+
     public void Ex035() { }
+
     public void Ex036() { }
     public void Ex037() { }
     public void Ex038() { }

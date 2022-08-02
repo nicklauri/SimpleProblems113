@@ -7,7 +7,7 @@ public partial class Program
     private List<MenuItem> InitMenuItems()
     {
         // Initialize list of actions, easy to create a menu.
-        return new() {
+        var menuItems = new List<MenuItem>() {
             new("S(n) = 1 + 2 + ... + n", Ex001),
             new("S(n) = 1^2 + 2^2 + ... + n^2", Ex002),
             new("S(n) = 1 + 1/2 + ... + 1/n", Ex003),
@@ -39,6 +39,31 @@ public partial class Program
             new("Find the biggest odd factor of a number n (with n >= 0)", Ex029),
             new("Check if n (n >= 0) is a perfect number", Ex030),
             new("Check if n (n >= 0) is a prime number", Ex031),
+            new("Check if n (n > 0) is a square number", Ex032),
+            new("S(n) = sqrt(2 + sqrt(2 + ... sqrt(2 + sqrt(2))))", Ex033),
+            new("S(n) = sqrt(n + sqrt(n - 1 + ... sqrt(2 + sqrt(1))))", Ex034),
+            // No 35
+            new("S(n) = sqrt(n! + sqrt((n - 1)! + ... sqrt(2! + sqrt(1!))))", Ex036, 36),
+            // Skip
+            new("Print all possible combinations of 1k, 2k and 5k in total of 200k", Ex110, 110),
         };
+
+        // Initializing the index since the ids are not continuous.
+        var index = 1;
+        foreach (var item in menuItems)
+        {
+            if (item.Idx is null)
+            {
+                item.Idx = index;
+            }
+            else
+            {
+                index = item.Idx.Value;
+            }
+
+            index += 1;
+        }
+
+        return menuItems;
     }
 }

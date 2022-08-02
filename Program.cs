@@ -51,37 +51,36 @@ public partial class Program
 
     private void RunProgram(int programId)
     {
-        var minChoice = 1;
-        var maxChoice = actions.Count;
-        if (programId < minChoice || programId > maxChoice)
+        var program = actions.FirstOrDefault(action => action.Idx == programId);
+        if (program is null)
         {
-            Console.WriteLine($"Your input is invalid, expect from {minChoice} to {maxChoice}, got: {programId}");
+            Console.WriteLine($"Your input is invalid, programId={programId} is not existed.");
             return;
         }
 
-        var action = actions[programId - 1];
-        Console.WriteLine($"Calculate: {action.Title}");
-        action.Action();
+        Console.WriteLine($"Calculate: {program.Title}");
+        program.Action();
     }
 
     private void DisplayMenu()
     {
-        var iter = actions.Select((action, i) => (Idx: i, action.Title));
-        foreach (var (idx, title) in iter)
+        foreach (var program in actions)
         {
-            Console.WriteLine($"{idx + 1,05}: {title}");
+            Console.WriteLine($"{program.Idx,05}: {program.Title}");
         }
     }
 
     protected class MenuItem
     {
+        public int? Idx { get; set; }
         public string Title { get; init; }
         public Action Action { get; init; }
 
-        public MenuItem(string title, Action action)
+        public MenuItem(string title, Action action, int? idx = null)
         {
             Title = title;
             Action = action;
+            Idx = idx;
         }
     }
 }
