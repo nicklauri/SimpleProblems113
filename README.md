@@ -1,6 +1,7 @@
 
 This repository contains code for 113 exercises.
 
+```
 ### Đề
 Bài 1: Tính S(n) = 1 + 2 + 3 + ... + n
 Bài 2: Tính S(n) = 1^2 + 2^2 + ... + n^2
@@ -117,3 +118,4 @@ Bài 112: Viết chương trình in ra hình chữ nhật có kích thước m x
 Hình chữ nhật đặc
 Hình chữ nhật rỗng
 Bài 113: Lập chương trình tính sin(x) với độ chính xác 0.00001 theo công thức: Sin(x) = x – x^3/3! + x^5/5! + ... + (-1)^n . x^2n + 1/(2n + 1)!
+```
